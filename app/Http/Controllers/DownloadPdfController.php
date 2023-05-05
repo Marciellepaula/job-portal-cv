@@ -8,8 +8,7 @@ use App\Resume;
 use App\Skill;
 use Illuminate\Http\Request;
 use Auth;
-
-
+use Dompdf\Dompdf;
 
 class DownloadPdfController extends Controller
 {
@@ -21,22 +20,36 @@ class DownloadPdfController extends Controller
 
     public function submit()
     {
+
+
         $fileName = 'example.pdf';
-        return \PDF::loadView('cv.submit')->setPaper('a4', 'landscape')
-            ->download($fileName);
+        \PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+        $pdf = \PDF::loadView('cv.submit')->setPaper('a4', 'landscape');
+        return $pdf->stream($fileName);
+
+
+
+        // $dompdf = new Dompdf();
+        // $html = \PDF::LOADView('cv.submit');
+        // $html .= ' <link type="text/css" media="all" rel="stylesheet" href="{{ asset(css1/style.css) }}">';
+        // $dompdf->loadHtml($html);
+
+        // $fileName = 'example.pdf';
+        // $pdf =  $dompdf->stream($fileName, [
+        //     "Attachment" => true
+        // ]);
+        // return $pdf;
+
         //return view('cv.submit');
     }
 
-    public function download(Request $request)
+    public function index()
     {
+        return view('cv.PPP');
+    }
 
-
-
-        $fileName = 'example.pdf';
-
-        //Save PDF to storag
-        return \PDF::loadView('cv.create', compact())
-            // Se quiser que fique no formato a4 retrato: ->setPaper('a4', 'landscape')
-            ->download($fileName);
+    public function index1()
+    {
+        return view('cv.curriculo_generator');
     }
 }

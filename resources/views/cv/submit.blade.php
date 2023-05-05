@@ -1,17 +1,17 @@
 <?php
 define('Token', 'HGsZOXpfNC');
-$skills = [];
-$skill_levels = [];
-$hobbies = [];
-$institutes = [];
-$degrees = [];
-$froms = [];
-$tos = [];
-$grades = [];
-$titles = [];
-$descriptions = [];
+$skills = array();
+$skill_levels = array();
+$hobbies = array();
+$institutes = array();
+$degrees = array();
+$froms = array();
+$tos = array();
+$grades = array();
+$titles = array();
+$descriptions = array();
 
-if (Token == $_POST['token']) {
+if (Token === $_POST['token']) {
     $temp_profile = $_FILES['profile_image']['tmp_name'];
     $profile = $_FILES['profile_image']['name'];
     $dir = 'images/';
@@ -35,95 +35,59 @@ if (Token == $_POST['token']) {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $about_me = $_POST['about_me'];
-    array_push($skills, $_POST['skill1']);
-    array_push($skill_levels, intval($_POST['skill_level1']));
-    array_push($hobbies, $_POST['hobby1']);
-    array_push($institutes, $_POST['institute1']);
-    array_push($degrees, $_POST['degree1']);
-    array_push($froms, $_POST['from1']);
-    array_push($tos, $_POST['to1']);
-    array_push($grades, $_POST['grade1']);
-    array_push($titles, $_POST['title1']);
-    array_push($descriptions, $_POST['description1']);
+    
+    // Add the first skill and level to the arrays
+    if (isset($_POST['skill1']) && !empty($_POST['skill1']) && isset($_POST['skill_level1']) && !empty($_POST['skill_level1'])) {
+        $skills[] = $_POST['skill1'];
+        $skill_levels[] = intval($_POST['skill_level1']);
+    }
 
-    if (isset($_POST['skill2']) && !empty($_POST['skill2'])) {
-        if (isset($_POST['skill_level2']) && !empty($_POST['skill_level2'])) {
-            array_push($skills, $_POST['skill2']);
-            array_push($skill_levels, intval($_POST['skill_level2']));
+    // Add additional skills and levels to the arrays
+    for ($i = 2; $i <= 5; $i++) {
+        $skill_field = 'skill' . $i;
+        $level_field = 'skill_level' . $i;
+        if (isset($_POST[$skill_field]) && !empty($_POST[$skill_field]) && isset($_POST[$level_field]) && !empty($_POST[$level_field])) {
+            $skills[] = $_POST[$skill_field];
+            $skill_levels[] = intval($_POST[$level_field]);
         }
     }
-    if (isset($_POST['skill3']) && !empty($_POST['skill3'])) {
-        if (isset($_POST['skill_level3']) && !empty($_POST['skill_level3'])) {
-            array_push($skills, $_POST['skill3']);
-            array_push($skill_levels, intval($_POST['skill_level3']));
+
+    // Add hobbies to the hobbies array
+    for ($i = 1; $i <= 4; $i++) {
+        $hobby_field = 'hobby' . $i;
+        if (isset($_POST[$hobby_field]) && !empty($_POST[$hobby_field])) {
+            $hobbies[] = $_POST[$hobby_field];
         }
     }
-    if (isset($_POST['skill4']) && !empty($_POST['skill4'])) {
-        if (isset($_POST['skill_level4']) && !empty($_POST['skill_level4'])) {
-            array_push($skills, $_POST['skill4']);
-            array_push($skill_levels, intval($_POST['skill_level4']));
-        }
+
+    // Add education details to the arrays
+    
+    for ($i = 2; $i <= 3; $i++) {
+    if (isset($_POST['institute'.$i]) && !empty($_POST['institute'.$i]) &&
+        isset($_POST['degree'.$i]) && !empty($_POST['degree'.$i]) &&
+        isset($_POST['from'.$i]) && !empty($_POST['from'.$i]) &&
+        isset($_POST['to'.$i]) && !empty($_POST['to'.$i]) &&
+        isset($_POST['grade'.$i]) && !empty($_POST['grade'.$i])) {
+        
+        array_push($institutes, $_POST['institute'.$i]);
+        array_push($degrees, $_POST['degree'.$i]);
+        array_push($froms, $_POST['from'.$i]);
+        array_push($tos, $_POST['to'.$i]);
+        array_push($grades, $_POST['grade'.$i]);
     }
-    if (isset($_POST['skill5']) && !empty($_POST['skill5'])) {
-        if (isset($_POST['skill_level5']) && !empty($_POST['skill_level5'])) {
-            array_push($skills, $_POST['skill5']);
-            array_push($skill_levels, intval($_POST['skill_level5']));
-        }
+    
+    if (isset($_POST['title'.$i]) && !empty($_POST['title'.$i]) &&
+        isset($_POST['description'.$i]) && !empty($_POST['description'.$i])) {
+        
+        array_push($titles, $_POST['title'.$i]);
+        array_push($descriptions, $_POST['description'.$i]);
     }
-    if (isset($_POST['hobby2']) && !empty($_POST['hobby2'])) {
-        array_push($hobbies, $_POST['hobby2']);
-    }
-    if (isset($_POST['hobby3']) && !empty($_POST['hobby3'])) {
-        array_push($hobbies, $_POST['hobby3']);
-    }
-    if (isset($_POST['hobby4']) && !empty($_POST['hobby4'])) {
-        array_push($hobbies, $_POST['hobby4']);
-    }
-    if (isset($_POST['institute2']) && !empty($_POST['institute2'])) {
-        if (isset($_POST['degree2']) && !empty($_POST['degree2'])) {
-            if (isset($_POST['from2']) && !empty($_POST['from2'])) {
-                if (isset($_POST['to2']) && !empty($_POST['to2'])) {
-                    if (isset($_POST['grade2']) && !empty($_POST['grade2'])) {
-                        array_push($institutes, $_POST['institute2']);
-                        array_push($degrees, $_POST['degree2']);
-                        array_push($froms, $_POST['from2']);
-                        array_push($tos, $_POST['to2']);
-                        array_push($grades, $_POST['grade2']);
-                    }
-                }
-            }
-        }
-    }
-    if (isset($_POST['institute3']) && !empty($_POST['institute3'])) {
-        if (isset($_POST['degree3']) && !empty($_POST['degree3'])) {
-            if (isset($_POST['from3']) && !empty($_POST['from3'])) {
-                if (isset($_POST['to3']) && !empty($_POST['to3'])) {
-                    if (isset($_POST['grade3']) && !empty($_POST['grade3'])) {
-                        array_push($institutes, $_POST['institute3']);
-                        array_push($degrees, $_POST['degree3']);
-                        array_push($froms, $_POST['from3']);
-                        array_push($tos, $_POST['to3']);
-                        array_push($grades, $_POST['grade3']);
-                    }
-                }
-            }
-        }
-    }
-    if (isset($_POST['title2']) && !empty($_POST['title2'])) {
-        if (isset($_POST['description2']) && !empty($_POST['description2'])) {
-            array_push($titles, $_POST['title2']);
-            array_push($descriptions, $_POST['description2']);
-        }
-    }
-    if (isset($_POST['title3']) && !empty($_POST['title3'])) {
-        if (isset($_POST['description3']) && !empty($_POST['description3'])) {
-            array_push($titles, $_POST['title3']);
-            array_push($descriptions, $_POST['description3']);
-        }
-    }
-} else {
+}
+
+if (empty($institutes) && empty($titles)) {
     header('location: /resumegenerator');
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,12 +97,11 @@ if (Token == $_POST['token']) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('css1/style.css') }}">
+    <link type="text/css" media="all" rel="stylesheet" href="{{ asset('css1/style.css') }}">
     <title><?php echo ucwords($first_name) . ' Resume'; ?></title>
 </head>
 
 <body>
-
     <div class="grid-container">
         <div class="zone-1">
             <div class="toCenter">
@@ -162,10 +125,10 @@ if (Token == $_POST['token']) {
                 <?php
                 for ($j = 0; $j < count($skills); $j++) {
                     echo "<div class='skill-1'>
-                                                                                                                                                                                                                                                                                  <p><strong>" .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  <p><strong>" .
                         strtoupper($skills[$j]) .
                         "</strong></p>
-                                                                                                                                                                                                                                                                                  <div class='progress'>";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  <div class='progress'>";
                     for ($i = 0; $i < $skill_levels[$j]; $i++) {
                         echo '<div class="fas fa-star active"></div>';
                     }
@@ -180,11 +143,11 @@ if (Token == $_POST['token']) {
                 <?php
                 foreach ($hobbies as $hobby) {
                     echo "<div class='d-flex align-items-center'>
-                                                                                                                                                                                                                                                                          <div class='circle'></div>
-                                                                                                                                                                                                                                                                          <div><strong>" .
+                                                                                                                                                                                                                                                                                                                                                                                                                                          <div class='circle'></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                          <div><strong>" .
                         ucwords($hobby) .
                         "</strong></div>
-                                                                                                                                                                                                                                                                        </div>";
+                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>";
                 }
                 
                 ?>
@@ -215,8 +178,8 @@ if (Token == $_POST['token']) {
                     <?php
                     for ($i = 0; $i < count($institutes); $i++) {
                         echo "<ul>
-                                                                                                                                                                                                                                                                                                                                            <li>
-                                                                                                                                                                                                                                                                                                                                              <div class='msg-1'>" .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class='msg-1'>" .
                             $froms[$i] .
                             '-' .
                             $tos[$i] .
@@ -225,11 +188,11 @@ if (Token == $_POST['token']) {
                             ', ' .
                             $grades[$i] .
                             "</div>
-                                                                                                                                                                                                                                                                                                                                              <div class='msg-2'>" .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class='msg-2'>" .
                             ucwords($institutes[$i]) .
                             "</div>
-                                                                                                                                                                                                                                                                                                                                            </li>
-                                                                                                                                                                                                                                                                                                                                          </ul>";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </ul>";
                     }
                     ?>
                 </div>
@@ -244,16 +207,16 @@ if (Token == $_POST['token']) {
                     <?php
                     for ($i = 0; $i < count($titles); $i++) {
                         echo "<ul>
-                                                                                                                                                                                                                                                                                                                                            <li>
-                                                                                                                                                                                                                                                                                                                                              <div class='msg-1'><br></div>
-                                                                                                                                                                                                                                                                                                                                              <div class='msg-2'>" .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class='msg-1'><br></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class='msg-2'>" .
                             ucwords($titles[$i]) .
                             "</div>
-                                                                                                                                                                                                                                                                                                                                              <div class='msg-3'>" .
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div class='msg-3'>" .
                             ucfirst($descriptions[$i]) .
                             "</div>
-                                                                                                                                                                                                                                                                                                                                            </li>
-                                                                                                                                                                                                                                                                                                                                          </ul>";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </ul>";
                     }
                     ?>
                 </div>

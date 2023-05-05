@@ -35,6 +35,9 @@ Route::post('/generate-pdf', 'DownloadPdfController@download');
 Route::get('/resumebuilder', 'DownloadPdfController@create');
 Route::get('/generator', 'DownloadPdfController@create');
 Route::post('/submit', 'DownloadPdfController@submit');
+Route::get('/PPP', 'DownloadPdfController@index');
+Route::post('/curriculo_generator', 'DownloadPdfController@index1');
+
 
 Auth::routes();
 
