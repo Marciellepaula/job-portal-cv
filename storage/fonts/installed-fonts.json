@@ -1,9 +1,12 @@
 {
     "font awesome 5 brands": {
-        "normal": "font_awesome_5_brands_normal_46b77e52f90f4a4bb6b06f59df9495c3"
+        "normal": "font_awesome_5_brands_normal_6c7b9742dc5ae85c1a4a9ff1945464dc"
     },
     "font awesome 5 free": {
-        "normal": "C:\\Users\\Marcielle\\Downloads\\job-portal-cv\\storage\\fonts\/font_awesome_5_free_normal_1caf3cfb62385c212e463e185e07e09e",
-        "900": "font_awesome_5_free_900_26af9e51d7f6a3784d3495b1580a4b86"
+        "normal": "C:\\Users\\Marcielle\\Downloads\\job-portal-cv\\storage\\fonts\/font_awesome_5_free_normal_53a461860a760912241c035ad97e42ed",
+        "900": "font_awesome_5_free_900_a496f8644d2cd386b5617d8f041a0ea0"
+    },
+    "fontawesome": {
+        "normal": "fontawesome_normal_6b8fcb303bfef6f4ea9e882534054307"
     }
 }

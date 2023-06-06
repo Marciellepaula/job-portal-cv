@@ -1,0 +1,278 @@
+/* Set default margin and padding to 0 for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the body font */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Create table-based layout */
+.grid-container {
+    min-height: 1000.52px;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.zone-1,
+.zone-2 {
+    display: table-cell;
+    vertical-align: top;
+}
+
+/* Style the left column */
+.zone-1 {
+    width: 50%;
+    background-color: #404040;
+    padding: 20px;
+    height: 94%;
+    /* Add this line to make the column fill the entire height */
+    box-sizing: border-box;
+    /* Add this line to include padding in the width calculation */
+}
+
+
+.profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.contact-box {
+    margin-top: 30px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.call,
+.email {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.call i,
+.email i {
+    margin-right: 10px;
+}
+
+
+
+/* Style the skills box */
+.personal-box {
+    margin-top: 30px;
+}
+
+.skill-1 {
+    margin-bottom: 10px;
+}
+
+.skill-1 p {
+    margin-bottom: 5px;
+}
+
+.progress {
+    display: flex;
+}
+
+.fas.fa-star {
+    color: #ffc107;
+}
+
+.fas.fa-star.active {
+    color: #f1c40f;
+}
+
+/* Style the hobbies box */
+.hobbies-box {
+    margin-top: 30px;
+}
+
+.d-flex.align-items-center {
+    margin-bottom: 10px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+}
+
+/* Style the right column */
+.zone-2 {
+    width: 70%;
+    padding: 20px;
+}
+
+.headTitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subTitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style the sections */
+.group-1,
+.group-2,
+.group-3 {
+    margin-bottom: 30px;
+}
+
+.group-1 .title,
+.group-2 .title,
+.group-3 .title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.box {
+    display: inline-block;
+    padding: 5px 10px;
+
+    color: #333;
+
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0;
+    font-weight: 700;
+    font-size: 1.14286rem;
+}
+
+.box h2 {
+    margin: 0;
+}
+
+.desc {
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.msg-1 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.msg-2 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* .msg-3 {
+    margin-top: 5px;
+} */
+
+
+.text {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: .71429rem;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.user-info-item {
+    text-transform: none;
+    display: inline-block;
+    width: 100%;
+    font-size: .92857rem;
+    line-height: 1.3;
+    color: #ccc;
+}
+
+
+.title {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0;
+    font-weight: 700;
+}
+
+.main-section .list-item--wrap {
+    padding: 20px 0 0;
+    display: inline-block;
+    width: 100%;
+
+}
+
+
+.hide+.list-item--wrap {
+    padding-top: 0;
+}
+
+.list-item--wrap {
+    padding: 20px 0 0;
+    display: inline-block;
+    width: 100%;
+}
+
+
+.list-item--wrap>div {
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+.list-item--title {
+    display: block;
+    font-weight: 700;
+}
+
+.list-item {
+    position: relative;
+    font-size: .85714rem;
+    margin: 0 0 0 80px;
+    padding: 0 20px 0 0;
+    line-height: 1.3;
+}
+
+.list-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: 8%;
+    width: 1px;
+    background: #bfbfbf;
+}
+
+.sidebar-item {
+    display: inline-block;
+    float: left;
+    text-align: right;
+    width: 60px;
+    font-weight: 700;
+    font-size: .60714rem;
+    margin-top: 4px;
+    text-transform: uppercase;
+    color: #757575;
+}
+
+.area textarea {
+    height: 200px;
+    /* Adjust the height value as needed */
+    width: 400px;
+    /* Adjust the width value as needed */
+}
