@@ -32,16 +32,47 @@ body {
     /* Add this line to make the column fill the entire height */
     box-sizing: border-box;
     /* Add this line to include padding in the width calculation */
+
+    margin-top: 30px;
+    clear: left;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+
+}
+
+/* image */
+.user-img img {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    top: -1px;
 }
 
 
-.profile {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 20px;
+.user-img {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 130px;
+    width: 130px;
+    height: 130px;
+    /* border: 3px solid #fff; */
 }
+
+
+/* span */
+
+
+.user-info-item>span {
+    text-transform: none;
+
+    width: 100%;
+    font-size: .92857rem;
+    line-height: 1.3;
+}
+
+
 
 .contact-box {
     margin-top: 30px;
@@ -111,7 +142,7 @@ body {
 
 /* Style the right column */
 .zone-2 {
-    width: 70%;
+    width: 100%;
     padding: 20px;
 }
 

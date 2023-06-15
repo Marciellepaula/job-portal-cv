@@ -33,7 +33,7 @@ function addEducation() {
         addEducation.insertAdjacentElement("beforeend", htmlObject);
     }
     if (education_count == 3) {
-        educationHide.style = "display:none";
+        educationHide.classList.add("d-none");
     }
 }
 

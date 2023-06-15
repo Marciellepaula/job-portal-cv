@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css1/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app1.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/stylebtn.css') }}">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Rest of your code -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 
 
@@ -36,183 +38,312 @@
                     </legend>
                     <input type="hidden" name="token" value="HGsZOXpfNC">
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="avatar m-5">
-                                <label for="avatar" class="btn btn-primary custom-button d-sm-inline-block ">
-                                    <span class="">
-                                        <i class="fas fa-camera me-2"></i>
-                                        Adicionar foto
-                                    </span>
-                                    <input id="avatar" name="profile_image" type="file" style="display: none;">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
+                        <div class="input-group mb-10">
                             <label class="cv-label">Foto do perfil</label>
-                            <div class="avatar-img">
-                                <img id="avatar-img" src="https://cdn.todacarreira.com/img/avatar.jpg"
-                                    data-default="https://cdn.todacarreira.com/img/avatar.jpg" alt="Foto do perfil">
+                            <div class="avatar-wrap">
+                                <label for="avatar" class="form-btn form-btn-add--item"><span><i></i>Adicionar
+                                        foto</span></label>
+                                <input id="avatar" name="profile_image" type="file" onchange="profilePic();">
+                                <div class="avatar-img">
+                                    <img id="avatar-img" src="https://cdn.todacarreira.com/img/avatar.jpg"
+                                        data-default="https://cdn.todacarreira.com/img/avatar.jpg" alt="Foto do perfil">
+                                </div>
                             </div>
+
                         </div>
                     </div>
 
                     <div class=" p-3 mb-3">
-                        <h2>Contato</h2>
                         <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Primeiro Nome <span class="required-mark">*</span></label>
-                                <input type="text" name="first_name" class="form-control-sm " required>
+                            <div class="input-group full-w mt-15">
+                                <label class="cv-label">Primeiro Nome <span class="required-mark">*</span></label>
+                                <input type="text" name="first_name" class="input-info" required>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Último Nome</label>
-                                <input type="text" name="last_name"class="form-control-sm" required>
+                            <div class="input-group">
+                                <label class="cv-label">Último Nome</label>
+                                <input type="text" name="last_name"class="input-info" required>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Email</label>
-                                <input type="email" class="form-control-sm" name="email">
-                                <div class="form-text text-light">We'll never share your email with anyone else.
+                            <div class="input-group">
+                                <label class="cv-label" for="email">Email <span
+                                        class="required-mark">*</span></label>
+                                <input type="email" maxlength="70" id="email" class="input-info" name="email"
+                                    required="" value="" placeholder="Coloque um email válido"><span
+                                    class="cv-error"></span>
+                            </div>
+
+                            <div class="input-group float-r">
+                                <label class="cv-label" for="mobile">Celular</label>
+                                <input maxlength="20" id="phone" class="input-info" name="phone" value=""
+                                    placeholder="(00) 12345-6789"><span class="cv-error"></span>
+                            </div>
+                            <div class="input-group float-r">
+                                <label class="cv-label">Nacionalidade</label>
+                                <input type="text" class="input-info" id="nationality" name="nationality"
+                                    placeholder="">
+                            </div>
+
+                            <div class="input-group float-w">
+                                <label class="cv-label">Estado Civil</label>
+                                <input type="text" class="input-info" id="marital" name="marital">
+                            </div>
+
+                            <div class="input-group float-l">
+                                <div class="table">
+                                    <div class="table-cell table-cell--quarter">
+                                        <label class="cv-label" for="age">Idade</label>
+                                        <input name="age" id="age" class="input-info" min="1"
+                                            max="200" type="number" value=""><span
+                                            class="cv-error"></span>
+                                    </div>
+
+                                    <div class="table-cell">
+                                        <label class="cv-label" for="gender">Gênero</label>
+                                        <div class="input-info--wrap">
+                                            <input name="gender" id="gender" class="input-info">
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Número</label>
-                                <input type="text" class="form-control-sm" id="phone" name="phone"
-                                    placeholder="0300-1234567" pattern="[0-9]{4}[0-9]{7}">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Nacionalidade</label>
-                                <input type="text" class="form-control-sm" id="nationality" name="nationality"
-                                    placeholder="">
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Estado Civil</label>
-                                <input type="text" class="form-control-sm" id="marital" name="marital">
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Idade</label>
-                                <input type="text" class="form-control-sm" id="age" name="age">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Gênero</label>
-                                <input type="text" class="form-control-sm" id="gender" name="gender"
-                                    placeholder="">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label">Endereço</label>
-                                <input type="text" class="form-control-sm" id="address" name="address"
+                            <div class="input-group">
+                                <label class="cv-label">Endereço</label>
+                                <input type="text" class="input-info" id="address" name="address"
                                     placeholder="">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="step" id="step2">
-                    <div class="col-md-6 mb-3">
-                        <h2>Sobre mim</h2>
-                    </div>
-                    <div class="text-area">
-                        <textarea class="input-info" name="about_me" rows="5"></textarea>
-                    </div>
+                    <legend class="line line-header">
+                        <span>1.2 Informações adicionais</span>
+                    </legend>
+                    <div class="line_courses form-row-list">
+                        <h2>Informações adicionais</h2>
+                        <div class="text-area">
+                            <textarea class="input-info" name="about_me" rows="5"></textarea>
+                        </div>
+                        <legend class="line line-header">
+                            <span>2.1 Formação acadêmica</span>
+                        </legend>
+                        <div class="input-group full-w">
+                            <div class="trash-can">
+                                <i class="fas fa-trash-alt" onclick="clearInputs()"></i>
+                            </div>
+                            <label for="exampleInputEmail1" class="cv-label">Curso</label>
+                            <input maxlength="200" type="text" name="degree1" class="input-info">
+                        </div>
+                        <div class="input-group full-w">
+                            <div class="table">
+                                <label for="exampleInputEmail1" class="cv-label">Universidade</label>
+                                <input maxlength="200" type="text" name="institute1" class="input-info">
+                            </div>
+                            <div class="input-group">
+                                <div class="table">
+                                    <div class="table-cell table-cell--quarter">
+                                        <label class="cv-label" for="exampleInputEmail1">Início em</label>
+                                        <input type="number" name="from1" class="input-info" type="number"
+                                            placeholder="2022" min="1900" max="2023" value="">
+                                    </div>
 
-                    <div class="col-md-6 mb-3">
-                        <h2>Educação</h2>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Universidade</label>
-                            <input type="text" name="institute1" class="form-control-sm">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Curso</label>
-                            <input type="text" name="degree1" class="form-control-sm">
-                        </div>
-                        <div class="mb-3 d-flex justify-content-between">
-                            <div>
-                                <label for="exampleInputEmail1" class="form-label">De</label>
-                                <input type="text" name="from1" class="form-control-sm">
-                            </div>
-                            <div>
-                                <label for="exampleInputEmail1" class="form-label">Até</label>
-                                <input type="text" name="to1" class="form-control-sm">
+                                    <div class="table-cell table-cell--quarter">
+                                        <label for="exampleInputEmail1" class="cv-label">Fim em</label>
+                                        <input type="number" name="to1" type="number" class="input-info"
+                                            placeholder="" min="1970" max="2023" value="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div id="addEducation"></div>
-                        <div class="mb-3">
-                            <button type="button" id="education_hide" class="bg-green "
-                                onclick="addEducation()">+Adicionar outro curso</button>
-                        </div>
+                    </div>
+                    <div id="addEducation"></div>
+                    <div class="mb-3">
+                        <button type="button" id="education_hide" class="bg-green " onclick="addEducation()">+
+                            Adicionar outro curso</button>
                     </div>
                 </div>
                 <div class="step" id="step3">
                     <legend class="line line-header">
-                        <span>Qualificações e Cursos complementares</span>
+                        <span>2.2 Cursos complementares</span>
                     </legend>
-                    <div class="text-area">
-                        <textarea id="others_courses" class="input-info" name="others_courses" rows="5"></textarea>
+
+                    <div class="input-group full-w mt-15">
+                        <div class="text-area">
+                            <textarea id="others_courses" class="input-info" name="others_courses" rows="5"></textarea>
+                        </div>
+                        <span class="cv-error"></span>
                     </div>
                 </div>
+
                 <div class="step" id="step4">
-                    <div class=" p-3 mb-3">
-                        <h2>Experiência</h2>
-                        <div class="col-md-6 mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Cargo</label>
-                            <input type="text" name="title1" class="form-control-sm">
+                    <legend class="line line-header">
+                        <span>3.1 Experiência</span>
+                    </legend>
+                    <div class="input-group">
+                        <label for="exampleInputEmail1" class="cv-label">Cargo</label>
+                        <input type="text" name="title1" class="input-info">
+                    </div>
+
+                    <div class="input-group full-w">
+                        <label class="cv-label" for="">Descrição das suas funções na empresa</label>
+                        <textarea id="description1" class="input-info" name="description1" rows="3" cols="30"></textarea>
+                    </div>
+
+                    <div class="input-group full-w mt-15">
+                        <label for="exampleInputEmail1" class="cv-label">Empresa</label>
+                        <input type="text" name="company1" class="input-info">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="table">
+                            <div class="table-cell table-cell--quarter">
+                                <label class="cv-label" for="company_begin">Início em</label>
+                                <input id="from11" class="input-info" name="from11" type="number"
+                                    placeholder="2022" min="1900" max="2023" value="">
+                            </div>
+                            <div class="table-cell table-cell--quarter">
+                                <label class="cv-label" for="company_end">Fim em</label>
+                                <input id="to11" class="input-info" name="to11" type="number"
+                                    placeholder="2024" min="1970" max="2024" value="">
+                            </div>
                         </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Funções</label>
-                            <input type="text" name="description1" class="form-control-sm">
+                        <div class="input-checkbox mt-15">
+                            <input type="checkbox" id="work_present" name="work_present"
+                                onclick="disableEndDateInput()" value="">
+                            <span class="checkmark"></span>
+                            <label class="cv-label" for="work_present">Trabalho atualmente nesta empresa.</label>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Empresa</label>
-                            <input type="text" name="company1" class="form-control-sm">
-                        </div>
+                    </div>
 
-                        <div class="mb-3 d-flex justify-content-between">
-                            <div>
-                                <label for="exampleInputEmail1" class="form-label">De</label>
-                                <input type="text" name="from11" class="form-control-sm">
-                            </div>
-                            <div>
-                                <label for="exampleInputEmail1" class="form-label">Até</label>
-                                <input type="text" name="to11" class="form-control-sm">
-                            </div>
-                        </div>
-                        <div id="addExperience"></div>
-                        <div class="mb-3">
-                            <button type="button" id="experience_hide" class="bg-green"
-                                onclick="addExperience()">Adicionar experiencia+</button>
-                        </div>
+                    <div id="addExperience"></div>
+                    <div class="mb-3">
+                        <button type="button" id="experience_hide" class="bg-green"
+                            onclick="addExperience()">Adicionar
+                            experiencia+</button>
+
                     </div>
                 </div>
 
+
+
+                {{-- <div class="curriculum-footer">
+                    <div class="input-row full-w hidden-mobile">
+                        <div class="align-r">
+                            <div class="form-btn form-btn--reset">
+                                <i></i>
+                                <input id="btnResetForm" type="button" value="Recomeçar" title="Recomeçar">
+                            </div>
+
+                            <div class="form-btn form-btn--previous">
+                                <i></i>
+                                <input id="btnPrevious" type="button" value="Anterior" title="Pág. anterior"
+                                    class="">
+                            </div>
+                            <div class="form-btn form-btn--next">
+                                <i></i>
+                                <input id="btnNext" type="button" value="Seguinte" title="Pág. seguinte"
+                                    class="">       ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-row align-r flex-container">
+                        <div class="form-btn form-btn--xl form-btn--preview flex-item">
+                            <i></i>
+                            <input id="btnPreview" type="button" value="Ver e baixar">
+                        </div>
+                    </div>
+                    <div class="form-btn form-btn--reset hidden-desktop">
+                        <i></i>
+                        <input id="btnResetFormMobile" type="button" value="Recomeçar" title="Recomeçar">
+                    </div>
+                </div> --}}
+
+
+
+
+
+
+
+                <div class="curriculum-footer">
+                    <div class="input-row full-w hidden-mobile">
+                        <div class="align-r">
+                            <div class="form-btn form-btn--reset">
+                                <i></i>
+                                <input id="btnResetForm" type="button" value="Recomeçar" title="Recomeçar">
+                            </div>
+
+                            <div class="form-btn form-btn--previous">
+                                <i></i>
+                                <input id="btnPrevious" type="button" value="Anterior" title="Pág. anterior"
+                                    class="" onclick="previousStep()">
+                            </div>
+                            <div class="form-btn form-btn--next">
+                                <i></i>
+                                <input id="btnNext" type="button" value="Seguinte" title="Pág. seguinte"
+                                    class="" onclick="nextStep()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-row align-r flex-container">
+                        <div class="form-btn form-btn--xl form-btn--preview flex-item">
+                            <i></i>
+                            <input id="btnPreview" type="button" value="Ver e baixar">
+                        </div>
+                    </div>
+                    <div class="form-btn form-btn--reset hidden-desktop">
+                        <i></i>
+                        <input id="btnResetFormMobile" type="button" value="Recomeçar" title="Recomeçar">
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {{-- <div class="container">
+                    <div class="row">
+                        <a class="btn btn-primary bg-gray-200 m-2 btn-lg" id="generatePDFBtn" onclick="showModal()">
+                            <i class="fas fa-eye"></i> Ver e baixar
+                        </a>
+                    </div>
+                </div> --}}
+
+
+                {{-- 
                 <div class="container">
                     <div class="row">
-                        <div class="d-flex justify-content-end">
-                            <button type="button" id="btnlight" class="btn-secondary m-1"
+                        <div class="col-12 d-flex flex-column align-items-center">
+                            <button type="button" id="btnlight" class="btn btn-secondary m-1"
                                 onclick="previousStep()">
                                 <i class="fas fa-arrow-left"></i> Voltar
                             </button>
-                            <button type="button" id="btndark" class="bg-green m-1" onclick="nextStep()">
+                            <button type="button" id="btndark" class="btn btn-success m-1" onclick="nextStep()">
                                 <i class="fas fa-arrow-right"></i> Avançar
                             </button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="d-flex justify-content-end">
+
                             <a class="btn btn-primary bg-gray-200 m-2 btn-lg" id="generatePDFBtn"
                                 onclick="showModal()">
                                 <i class="fas fa-eye"></i> Ver e baixar
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-                <div id="pdfModal1" class="modal1" tabindex="-1" role="dialog">
-                    <div class="modal-dialog1 modal-dialog-scrollable" role="document">
-                        <div class="modal-content1">
-                            <div class="modal-body1   style="overflow-y: auto;"">
-                                <div id="modalData1"></div>
-                            </div>
-                            <div class="modal-footer1">
+
+                <div id="pdfModal1" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
                                 <a class="btn btn-primary btn-secondary" id="closeModalBtn" onclick="hideModal()">
                                     <i class="fas fa-close"></i> Fechar
                                 </a>
@@ -220,25 +351,53 @@
                                     <i class="fas fa-file-pdf"></i> Baixar PDF
                                 </button>
                             </div>
+                            <div class="modal-body style="overflow-y: auto;"">
+                                <div id="modalData1"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn btn-primary btn-secondary" id="closeModalBtn" onclick="hideModal()">
+                                    <i class="fas fa-close"></i> Fechar
+                                </a>
+                                <button type="submit" class="btn btn-primary btn-info">
+                                    <i class="fas fa-file-pdf"></i> Baixar PDF
+                                </button>
 
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </form>
         </div>
 
 
         <script src="{{ asset('cv/app.js') }}"></script>
     </div>
-    </div>
 </body>
-
 
 
 
 </html>
 
 <script>
+    function clearInputs() {
+        document.getElementById('nameInput').value = '';
+        document.getElementById('emailInput').value = '';
+    }
+
+
+    function disableEndDateInput() {
+        var endDateInput = document.getElementById("to11");
+        var checkbox = document.getElementById("work_present");
+
+        if (checkbox.checked) {
+            endDateInput.value = "";
+            endDateInput.disabled = true;
+        } else {
+            endDateInput.disabled = false;
+        }
+    }
+
     function showModal() {
         var pdfModal1 = document.getElementById('pdfModal1');
         pdfModal1.style.display = 'block';
@@ -323,7 +482,7 @@
         };
 
         var educationData = [];
-        for (var i = 1; i <= 3; i++) {
+        for (var i = 1; i <= education_count; i++) {
             var instituteInput = document.querySelector('input[name="institute' + i + '"]');
             var degreeInput = document.querySelector('input[name="degree' + i + '"]');
             var fromInput = document.querySelector('input[name="from' + i + '"]');
@@ -342,9 +501,13 @@
                     to: to
                 };
 
-                educationData.push(education);
+                if (institute != null && degree != null && from != null && to != null) {
+                    educationData.push(education);
+                }
             }
+
         }
+
 
 
         var step2Data = {
@@ -357,9 +520,9 @@
         };
 
         var workExperienceData = [];
-        for (var i = 1; i <= 6; i++) {
+        for (var i = 1; i <= experience_count; i++) {
             var titleInput = document.querySelector('input[name="title' + i + '"]');
-            var descriptionInput = document.querySelector('input[name="description' + i + '"]');
+            var descriptionInput = document.querySelector('textarea[name="description' + i + '"]');
             var companyInput = document.querySelector('input[name="company' + i + '"]');
             var from1Input = document.querySelector('input[name="from1' + i + '"]');
             var to1Input = document.querySelector('input[name="to1' + i + '"]');
@@ -371,6 +534,8 @@
                 var from1 = from1Input.value || null;
                 var to1 = to1Input.value || null;
 
+                console.log(from1);
+
                 var workExperience = {
                     title: title,
                     description: description,
@@ -379,9 +544,14 @@
                     to1: to1
                 };
 
-                workExperienceData.push(workExperience);
+                if (title != null && description != null && company != null && from1 != null) {
+                    workExperienceData.push(workExperience);
+                }
+
             }
+
         }
+
 
         var step4Data = {
             work_experience: workExperienceData
@@ -418,8 +588,7 @@
         };
         xhr.open("POST", 'submit1', true);
         xhr.setRequestHeader("X-CSRF-TOKEN", csrfToken);
-        xhr.send(
-            formData); // Replace 'example' with your actual data
+        xhr.send(formData); // Replace 'example' with your actual data
     }
 
 

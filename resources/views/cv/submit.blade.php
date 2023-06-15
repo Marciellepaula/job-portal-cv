@@ -78,7 +78,8 @@
                     @foreach ($institutes as $index => $institute)
                         <ul>
                             <li>
-                                <div class="msg-1">{{ $froms[$index] }} - {{ $tos[$index] }} |
+                                <div class="msg-1">
+                                    {{ $froms[$index] }} - {{ $tos[$index] }} |
                                     {{ ucwords($degrees[$index]) }}</div>
                                 <div class="msg-2">{{ ucwords($institute) }}</div>
                             </li>
@@ -111,19 +112,24 @@
                                     <div class="list-line">
                                         <span class="sidebar-item experience-period">Período</span>
                                         <p class="list-item preview-period">
-                                            {{ $froms1[$index] . ' - ' . $tos1[$index] }}</p>
+                                            @if ($froms1[$index] != '' && $tos1[$index])
+                                                {{ $froms1[$index] . ' - Presente' }}
+                                            @else
+                                                {{ $froms1[$index] . ' - ' . $tos1[$index] }}
+                                            @endif
+
+                                        </p>
                                     </div>
                                     <div class="list-line">
                                         <span class="sidebar-item experience-company_functions">Funções</span>
                                         <p class="list-item preview-company_functions">
-                                            {{ ucfirst($descriptions[$index]) }}</p>
+                                            {{ ucfirst($description[$index]) }}</p>
                                     </div>
                                 </li>
                             </ul>
                         @endforeach
                     </div>
                 </div>
-
 
 
                 <div class="personal-box">

@@ -18,36 +18,41 @@
 
 <body>
     <div class="grid-container">
+
+
         <div class="zone-1">
-            <div class="toCenter">
-                <img class="profile" src="{{ asset('storage/images1/' . $profile_image) }}" />
+            <div class="user-img">
+                <img alt="Foto do perfil" class="preview-avatar-img"
+                    src="{{ asset('storage/images1/' . $profile_image) }}" />
             </div>
             <div class="contact-box">
-                <span class="user-info-item">Celular</span>
-                <div class="text">{{ $phone }}</div>
+                <span class="user-info-item ">Celular
+                    <span class="">{{ $phone }}</span></span>
             </div>
-            <span class="user-info-item">Email</span>
-            <div class="text">{{ $email }}</div>
+            <span class="user-info-item">Email
+                <span class="">{{ $email }}</span></span>
 
             <div class="nationality">
-                <span class="user-info-item">Nacionalidade</span>
-                <div class="text">{{ $nationality }}</div>
+                <span class="user-info-item">Nacionalidade
+                    <span class="">{{ $nationality }} </span></span>
             </div>
+
             <div class="age">
-                <span class="user-info-item">Idade</span>
-                <div class="text">{{ $age }}</div>
+                <span class="user-info-item">Idade
+                    <span class="">{{ $age }}</span></span>
             </div>
             <div class="gender">
-                <span class="user-info-item">Gênero</span>
-                <div class="text">{{ $gender }}</div>
+                <span class="user-info-item">Gênero
+                    <span class="">{{ $gender }}</span></span>
             </div>
+
             <div class="marital">
-                <span class="user-info-item">Estado Civil</span>
-                <div class="text">{{ $marital }}</div>
+                <span class="user-info-item">Estado Civil
+                    <span class="">{{ $marital }}</span> </span>
             </div>
             <div class="address">
-                <span class="user-info-item user-info--address">Endereço</span>
-                <div class="text">{{ $address }}</div>
+                <span class="user-info-item user-info--address">Endereço
+                    <span class="">{{ $address }}</span> </span>
             </div>
         </div>
 
@@ -55,24 +60,21 @@
 
         <div class="zone-2">
 
-            <div class="headTitle">
-                <h1><br><br />{{ ucwords($first_name) }} {{ ucwords($last_name) }} <br><br /></h1>
+            <div class="">
+                <span class="user-info--name">
+                    {{ ucwords($first_name) }}</span>
             </div>
 
             <div class="group-1">
                 <div class="title">
-                    <div class="box">
-                        <h2>Sobre mim</h2>
-                    </div>
+                    <span class="main-section--title">Informações adicionais</span>
                 </div>
                 <div class="desc">{{ $about_me }}</div>
             </div>
 
             <div class="group-2">
                 <div class="title">
-                    <div class="box">
-                        <h2>Educação</h2>
-                    </div>
+                    <span class="main-section--title academic-preview" style="">Formação acadêmica</span>
                 </div>
                 <div class="desc">
                     @foreach ($institutes as $index => $institute)
@@ -91,9 +93,7 @@
             <div class="desc">
                 <div class="group-3">
                     <div class="title">
-                        <div class="box">
-                            <h2>Experiencia</h2>
-                        </div>
+                        <span class="main-section--title" style="">Experiência</span>
                     </div>
                     <div class="desc">
                         @foreach ($titles as $index => $title)
@@ -106,12 +106,17 @@
                                     </div>
                                     <div class="list-line">
                                         <span class="sidebar-item experience-company">Empresa</span>
-                                        <p class="list-item preview-company">{{ ucwords($companies[$index]) }}</p>
+                                        <p class="list-item preview-company">{{ ucwords($companies[$index]) }}
+                                        </p>
                                     </div>
                                     <div class="list-line">
                                         <span class="sidebar-item experience-period">Período</span>
                                         <p class="list-item preview-period">
-                                            {{ $froms1[$index] . ' - ' . $tos1[$index] }}</p>
+                                            @if ($froms1[$index] != '' && $tos1[$index] == '')
+                                                {{ $froms1[$index] . ' - Presente' }}
+                                            @else
+                                                {{ $froms1[$index] . ' - ' . $tos1[$index] }}
+                                            @endif
                                     </div>
                                     <div class="list-line">
                                         <span class="sidebar-item experience-company_functions">Funções</span>
@@ -127,9 +132,7 @@
 
 
                 <div class="personal-box">
-                    <div class="title">
-                        <h2>Cursos Complementares</h2>
-                    </div>
+                    <span class="main-section--subtitle">Qualificações e Cursos complementares</span>
                     {{ $others_courses }}
                 </div>
 
