@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 
-class aplication
+class  DownloadCurriculoController extends Controller
 {
+
     public function submitForm(Request $request)
     {
         // Validate the form inputs
