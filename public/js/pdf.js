@@ -27,7 +27,7 @@ curriculumvitae = (function () {
 
     var storageData = curriculumvitae.storageData();
     var currentStep = window.sessionStorage.getItem("currentStep") || 1;
-    curriculumvitae.openTab(parseInt(currentStep));
+    curriculumvitae.openTab(parseInt(currgientStep));
 
     var steps = document.getElementsByClassName("step");
     var avatarImg = document.getElementById("avatar-img");
