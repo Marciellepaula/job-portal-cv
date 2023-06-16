@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('jobs');
 });*/
 
+Route::post('/curriculum', 'CurriculumController@store')->name('curriculum.store');
 
 
 Route::middleware(['auth:employeer'])->group(function () {
