@@ -544,6 +544,8 @@ var curriculumvitae = curriculumvitae || {},
           }),
           t.send(e);
       },
+
+
       openTab: function (t) {
         (document.getElementById("currentStep").value = t),
           this.moveBarProgression(t);
@@ -892,4 +894,3 @@ var curriculumvitae = curriculumvitae || {},
       },
     };
   })();
->>>>>>> 09837adf24bb9e9b7fe7a540f9b69971dbaaebe3

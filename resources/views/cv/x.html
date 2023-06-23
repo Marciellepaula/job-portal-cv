@@ -1,0 +1,335 @@
+<style>
+    .cv-roma {
+        overflow: hidden;
+        font-size: .7em;
+        color: #404040;
+    }
+
+    .cv-roma .export_cv {
+        overflow: hidden;
+        padding-bottom: 0;
+    }
+
+    .cv-roma * {
+        font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .cv-roma .sidebar {
+        display: inline-block;
+        text-align: center;
+        margin: 0;
+        padding: 40px 20px 0;
+        width: 30%;
+        color: #404040;
+        float: left;
+    }
+
+    .cv-roma .export_cv:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+
+
+
+    .cv-roma .sidebar .user-img {
+        display: inline;
+        overflow: hidden;
+        border-radius: 130px;
+        width: 130px;
+        height: 130px;
+        border: 3px solid #fff;
+    }
+
+    .cv-roma .sidebar .user-img img,
+    .cv-seul .user-img img {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        border-radius: 130px;
+        top: -1px;
+    }
+
+    .cv-roma .sidebar .user-img.hide {
+        display: none;
+    }
+
+    .cv-roma .sidebar .user-img.hide+.user-info {
+        margin-top: 80px;
+    }
+
+    .cv-roma .sidebar .user-info {
+        margin-top: 30px;
+        clear: left;
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .cv-roma .sidebar .user-info-item {
+        position: relative;
+        display: inline;
+        width: 100%;
+        font-size: .71429rem;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    .cv-roma .sidebar .user-info-item>span {
+        text-transform: none;
+        display: inline;
+        width: 100%;
+        font-size: .92857rem;
+        line-height: 1.3;
+    }
+
+
+
+
+
+    .cv-roma .user-info--name {
+        font-size: 2.14286rem;
+        line-height: 1.1;
+        margin-bottom: 12px;
+        display: inline-block;
+        width: 100%
+    }
+
+    .cv-roma .main {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        display: inline-block;
+        width: 70%;
+        float: left;
+        padding: 40px 20px;
+        background: #fff
+    }
+
+    .cv-roma .main-section {
+        position: relative
+    }
+
+    .cv-roma .main-section--subtitle,
+    .cv-roma .main-section--title {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0 0;
+        font-weight: 700
+    }
+
+    .cv-roma .main-section--title {
+        font-size: 1.14286rem
+    }
+
+    .cv-roma .main-section--subtitle {
+        font-size: .92857rem
+    }
+
+    .cv-roma .main-section .list-item {
+        position: relative;
+        font-size: .85714rem;
+        margin: 0 0 0 80px;
+        padding: 0 20px 0 0;
+        line-height: 1.3
+    }
+
+    .cv-roma .main-section .list-item:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10px;
+        height: 100%;
+        width: 1px;
+        background: #bfbfbf
+    }
+
+    .cv-roma .main-section .list-item--large {
+        font-size: .92857rem;
+        margin: 0;
+        padding-top: 3px;
+        padding-bottom: 10px;
+        line-height: 1.4
+    }
+
+    .cv-roma .main-section .list-item--large:before {
+        content: none
+    }
+
+    .cv-roma .main-section .list-item--wrap {
+        padding: 20px 0 0;
+        display: inline-block;
+        width: 100%
+    }
+
+    .cv-roma .main-section .list-item--title {
+        display: block;
+        font-weight: 700
+    }
+
+    .cv-roma .main-section ul,
+    .cv-seul .main-section ul {
+        margin: 0;
+        padding: 5px 0 0;
+        list-style: none
+    }
+
+    .cv-roma .main-section ul .sidebar-item {
+        display: inline-block;
+        float: left;
+        text-align: right;
+        width: 60px;
+        font-weight: 700;
+        font-size: .60714rem;
+        margin-top: 4px;
+        text-transform: uppercase;
+        color: #757575
+    }
+
+    .cv-roma .main .hide+.list-item--wrap {
+        padding-top: 0
+    }
+
+
+
+    .cv-roma .sidebar {
+        position: relative;
+        color: #404040;
+    }
+
+    .cv-roma .sidebar:before {
+        content: '';
+        position: absolute;
+        width: 62mm;
+        height: 10000mm;
+        top: 0;
+        left: 0;
+        border-right: 2px solid #d39d44;
+    }
+
+    .cv-roma[data-template-color=dark] .sidebar {
+        color: #fff;
+    }
+
+    .cv-roma[data-template-color=dark] .sidebar:before {
+        width: 63mm;
+        background: #434a54;
+        border: 0;
+    }
+</style>
+
+<div class="template cv-roma active" data-template-color="dark" data-template-id="roma">
+    <div class="export_cv print" data-cv-print-area>
+        <div data-cv-step="step1_preview" class="sidebar">
+            <span class="user-img">
+                <img class="preview-avatar-img" src="" alt="Foto do perfil"></span>
+
+            <div class="user-info">
+                <span class="user-info-item user-info--email">Email
+                    <span data-cv-preview-id="email"></span>
+                </span>
+                <span class="user-info-item user-info--telephone">Telefone Residêncial
+                    <span data-cv-preview-id="telephone"></span>
+                </span>
+                <span class="user-info-item user-info--mobile">Celular
+                    <span data-cv-preview-id="mobile"></span>
+                </span>
+                <span class="user-info-item user-info--nationality">Nacionalidade
+                    <span data-cv-preview-id="nationality"></span>
+                </span>
+                <span class="user-info-item user-info--age">Idade
+                    <span><span data-cv-preview-id="age"></span> anos</span>
+                </span>
+                <span class="user-info-item user-info--gender">Gênero
+                    <span data-cv-preview-id="gender"></span>
+                </span>
+                <span class="user-info-item user-info--marital">Estado Civil
+                    <span data-cv-preview-id="marital"></span>
+                </span>
+                <span class="user-info-item user-info--address">Endereço
+                    <span data-cv-preview-id="address"></span>
+                </span>
+                <span class="user-info-item user-info--cep">CEP
+                    <span data-cv-preview-id="cep"></span>
+                </span>
+            </div>
+        </div>
+        <div class="main">
+            <span class="user-info--name" data-cv-preview-id="name"></span>
+            <div data-cv-step="step1_2_preview" class="main-section">
+                <span class="main-section--title">Objetivo</span>
+                <p data-cv-preview-id="career-goal" class="list-item list-item--large preview-career-goal"></p>
+            </div>
+
+            <div data-cv-step="step2_preview" class="main-section">
+                <span data-cv-preview-id="academic" class="main-section--title academic-preview">Formação
+                    acadêmica</span>
+                <ul>
+                    <li class="list-item--wrap academic-block-preview hide">
+                        <div class="list-line">
+                            <span class="sidebar-item academic-course">Curso</span>
+                            <span class="list-item list-item--title preview-course"></span>
+                        </div>
+
+                        <div class="list-line">
+                            <span class="sidebar-item academic-school">Instituição</span>
+                            <p class="list-item preview-school academic-school"></p>
+                        </div>
+
+                        <div class="list-line">
+                            <span class="sidebar-item academic-school_conclusion_year">Conclusão</span>
+                            <p class="list-item preview-school_conclusion_year academic-school_conclusion_year">
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="no-break">
+                    <span class="main-section--subtitle">Qualificações e Cursos
+                        complementares</span>
+                    <p data-cv-preview-id="other_courses" class="list-item list-item--large"></p>
+                </div>
+            </div>
+
+            <div data-cv-step="step3_preview" class="main-section">
+                <span data-cv-preview-id="experience" class="main-section--title">Experiência</span>
+                <ul>
+                    <li class="list-item--wrap hide experience-block-preview">
+                        <div class="list-line">
+                            <span class="sidebar-item experience-company_office">Cargo</span>
+                            <span class="list-item list-item--title preview-company_office"></span>
+                        </div>
+
+                        <div class="list-line">
+                            <span class="sidebar-item experience-company">Empresa</span>
+                            <p class="list-item preview-company"></p>
+                        </div>
+
+                        <div class="list-line">
+                            <span class="sidebar-item experience-period">Período</span>
+                            <p class="list-item preview-period"></p>
+                        </div>
+
+                        <div class="list-line">
+                            <span class="sidebar-item experience-company_functions">Funções</span>
+                            <p class="list-item preview-company_functions"></p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="no-break">
+                    <span class="main-section--subtitle">Atividades complementares</span>
+                    <p data-cv-preview-id="other_activity" class="list-item list-item--large"></p>
+                </div>
+            </div>
+
+            <div data-cv-step="step4_preview" class="main-section">
+                <div class="no-break">
+                    <span class="main-section--title">Informações adicionais</span>
+                    <p data-cv-preview-id="other_informations" class="list-item list-item--large"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

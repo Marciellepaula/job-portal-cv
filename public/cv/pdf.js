@@ -225,6 +225,7 @@ var curriculumvitae = curriculumvitae || {}
                                 n.getElementsByClassName("preview-company_functions")[0].innerHTML = t,
                                 u.append(n))
                         }),
+
                         t = a.querySelector('[data-cv-preview-id="other_activity"]'),
                         "" == document.getElementById("other_activity").value.trim() ? t.parentElement.style.display = "none" : (t.innerHTML = document.getElementById("other_activity").value.replace(/\n/g, "<br />"),
                             t.parentElement.removeAttribute("style"),
@@ -235,21 +236,28 @@ var curriculumvitae = curriculumvitae || {}
                     curriculumvitae.adjustCVSize()
             },
             generatePdf: function () {
-                var a = document.querySelector(".template.active")
-                    , e = new FormData;
+                var a = document.querySelector(".template.active");
+                var e = new FormData();
                 e.append("cv", a.outerHTML);
-                var t = new XMLHttpRequest;
-                t.open("POST", "/curriculo_generator", !0),
-                    t.responseType = "arraybuffer",
-                    t.onload = function (e) {
-                        var t, r;
-                        200 == this.status && (t = new Blob([this.response], {
-                            type: "application/pdf"
-                        }),
-                            (r = document.createElement("a")).href = window.URL.createObjectURL(t),
-                            r.download = a.querySelector('[data-cv-preview-id="name"]').textContent + " - CurrÃ­culo.pdf",
-                            r.click())
-                    }
+
+                // Retrieve the CSRF token from the meta tag
+                var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+                var t = new XMLHttpRequest();
+                // console.log(a.outerHTML);
+                t.open("POST", "/generate_pdf", true);
+                t.setRequestHeader("X-CSRF-TOKEN", csrfToken);
+                t.responseType = "arraybuffer";
+
+                t.onload = function (e) {
+                    var t, r;
+                    200 == this.status && (t = new Blob([this.response], {
+                        type: "application/pdf"
+                    }),
+                        (r = document.createElement("a")).href = window.URL.createObjectURL(t),
+                        r.download = a.querySelector('[data-cv-preview-id="name"]').textContent + " - Currículo.pdf",
+                        r.click())
+                }
                     ,
                     t.send(e)
             },
