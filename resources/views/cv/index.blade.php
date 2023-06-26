@@ -13,16 +13,29 @@
     <meta property="og:title" content="Gerador de Currículo Online e Grátis">
 
     <meta property="og:description"
-        content="Crie aqui o seu currículo online grátis
-        . Preencha os campos e quando terminar poderá descarregar o seu curriculum vitae.">
+        content="Crie aqui o seu currículo online grátis. Preencha os campos e quando terminar poderá descarregar o seu curriculum vitae.">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta property="og:url" content="">
+
+    <meta property="og:type" content="article">
+
+    <meta property="og:image" content="">
+
+    <meta property="og:site_name" content="Toda Carreira">
+
+    <meta property="fb:app_id" content="1013417268830710">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:description"
+        content="Use o nosso gerador de currículo online para criar seu CV em poucos minutos, de forma simples, gratuita e sem cadastro. Fazer um Curriculum Vitae online...">
 
 
+    <link rel="canonical" href="">
 
+    <link rel="manifest" href="/manifest.json">
 
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="rss/">
 
     <style>
         @media (min-width:1024px) {
@@ -127,7 +140,54 @@
             src: local("Muli Regular"), local("Muli-Regular"), url(https://cdn.todacarreira.com/fonts/muli-regular.woff2) format("woff2"), url(https://cdn.todacarreira.com/fonts/muli-regular.woff) format("woff")
         }
 
+        @font-face {
+            font-family: 'Muli';
+            font-style: normal;
+            font-weight: 700;
+            src: local("Muli Bold"), local("Muli-Bold"), url(https://cdn.todacarreira.com/fonts/muli-700.woff2) format("woff2"), url(https://cdn.todacarreira.com/fonts/muli-700.woff) format("woff")
+        }
 
+        @font-face {
+            font-family: 'Muli';
+            font-style: italic;
+            font-weight: 700;
+            src: local("Muli Bold Italic"), local("Muli-BoldItalic"), url(https://cdn.todacarreira.com/fonts/muli-700italic.woff2) format("woff2"), url(https://cdn.todacarreira.com/fonts/muli-700italic.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 300;
+            src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-300.woff2) format("woff2"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-300.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-regular.woff2) format("woff2"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-regular.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: italic;
+            font-weight: 400;
+            src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-italic.woff2) format("woff2"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-italic.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 700;
+            src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-700.woff2) format("woff2"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-700.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: italic;
+            font-weight: 700;
+            src: local("Source Sans Pro Bold Italic"), local("SourceSansPro-BoldIt"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-700italic.woff2) format("woff2"), url(https://cdn.todacarreira.com/fonts/source-sans-pro-700italic.woff) format("woff")
+        }
 
         h1,
         h2,
@@ -2517,7 +2577,7 @@
         .secondary-title {
             margin: 0;
             font-size: 1.25rem;
-            color: hsla(196, 93%, 52%, 0.945)
+            color: #d39d44
         }
 
         .share-module {
@@ -2935,12 +2995,12 @@
         }
 
         .header--top-bar {
-            background-color: hsla(196, 93%, 52%, 0.945);
+            background-color: #d39d44;
             -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1), 0 0 7px 0 rgba(0, 0, 0, .3);
             box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1), 0 0 7px 0 rgba(0, 0, 0, .3);
-            background: hsla(196, 93%, 52%, 0.945);
-            background: -webkit-gradient(linear, left top, right top, from(hsla(196, 93%, 52%, 0.945)), to(hsla(196, 65%, 64%, 0.945)));
-            background: linear-gradient(to right, hsla(196, 93%, 52%, 0.945), hsla(196, 93%, 52%, 0.945))
+            background: #d39d44;
+            background: -webkit-gradient(linear, left top, right top, from(#d39d44), to(#bb8122));
+            background: linear-gradient(to right, #d39d44, #bb8122)
         }
 
         .nav {
@@ -3119,96 +3179,28 @@
             background: #eee
         }
     </style>
-    <script>
-        "localStorage" in window || (window.localStorage = {
-            _data: {},
-            setItem: function(a, b) {
-                return this._data[a] = String(b)
-            },
-            getItem: function(a) {
-                return this._data.hasOwnProperty(a) ? this._data[a] : void 0
-            },
-            removeItem: function(a) {
-                return delete this._data[a]
-            },
-            clear: function() {
-                return this._data = {}
-            }
-        })
-    </script>
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KHJ8HBJ');
-    </script>
-    <script async="" defer="" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script>
-        var googletag = window.googletag || {
-            cmd: []
-        };
-        if (window.localStorage && !window.localStorage.getItem("sg_gpt_event")) {
-            window.localStorage.setItem("sg_gpt_event", Math.floor((Math.random() * 100) + 1) <= 10 ? 1 : 0);
-        }
-    </script>
-
-
 
 </head>
 
 <body class="body-article">
+    <script src="https://cdn.todacarreira.com/frontoffice.026.js"></script>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHJ8HBJ" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <header class="header">
-        <div class="header--top-bar">
-            <div class="container header--container">
-                <div class="logo">
-                    <!-- <a href="/">
-                        <img src="https://cdn.todacarreira.com/img/logo.png?v1" srcset="https://cdn.todacarreira.com/img/logo@2x.png 2x
-                        ,https://cdn.todacarreira.com/img/logo@3x.png 3x" alt="Toda Carreira" width="174" height="22">
-
-                    </a> -->
-                </div>
-                <nav class="nav">
-
-                    <div class="main-menu">
-                        <a href="/curriculo/">Currículo</a>
-
-
-                    </div>
-
-                    <div class="search-desktop">
-                        <form role="search" action="/busca/">
-                            <input type="text" name="s" value="" placeholder="Buscar"
-                                class="search-desktop--input">
-                            <i></i>
-                        </form>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <!-- <header class="header">
+       
+    </header> -->
 
 
 
     <div class="container">
-        <ol class="breadcrumbs" id="breadcrumb" itemscope="" itemtype="">
-            <li class="item" itemprop="itemListElement" itemscope="" itemtype="">
+        <ol class="breadcrumbs" id="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+            <li class="item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                 <a itemprop="item" href="/">
-
-                    <meta itemprop="position" content="1">
+                    <span itemprop="name">Toda Carreira</span></a>
+                <meta itemprop="position" content="1">
             </li>
 
-            <li class="item" itemprop="itemListElement" itemscope="" itemtype="">
+            <li class="item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                 <a itemprop="item" href="/curriculo/">
                     <span itemprop="name">Currículo</span></a>
                 <meta itemprop="position" content="2">
@@ -3228,44 +3220,41 @@
                         <div id="google_ads_iframe_/1062898/TodaCarreira_Detalhe_MREC_0__container__"
                             style="border: 0pt none; width: 250px; height: 0px;"></div>
                     </div>
-                    <p>Use o nosso gerador de currículo online para criar seu CV em poucos minutos, de forma simples,
-                        gratuita e sem cadastro. Fazer um Curriculum Vitae online nunca foi tão fácil.</p>
-                    <p>Preencha os campos e quando terminar poderá baixar seu curriculum vitae com fotografia.</p>
-                    <p>
-                    </p>
+
                     <div class="page-curriculum-vitae">
-                        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-                        <form id="form-curriculum" action="/curriculo_generator" method="post"
-                            enctype="multipart/form-data" target="formtarget" style="">
-                            <input type="hidden" name="currentStep" id="currentStep" value="2"><input
-                                type="hidden" name="type" id="type" value="">
+                        <link rel="stylesheet" href="https://cdn.todacarreira.com/curriculum.011.css">
+                        <form id="form-curriculum" action="/generate_pdf" method="post" enctype="multipart/form-data"
+                            target="formtarget">
+                            @csrf
+                            <meta name="csrf-token" content="{{ csrf_token() }}">
+                            <input type="hidden" name="currentStep" id="currentStep" value="1">
+                            <input type="hidden" name="type" id="type" value="">
                             <div class="curriculum-header hidden-mobile">
                                 <div class="step-wrapper">
 
                                     <div class="progress-bar">
-                                        <div id="bar" class="bar" style="width: 50%;"></div>
+                                        <div id="bar" class="bar" style="width: 25%;"></div>
                                     </div>
 
                                     <ol class="step-wrapper--tabs">
-                                        <li id="nav-step1" class="step step1" data-id="step1"
+                                        <li id="nav-step1" class="step step1 active" data-id="step1"
                                             aria-labelledby="nav-step1">
-                                            <i class="fa-solid fa-user"></i>
+                                            <i></i>
                                             Dados Pessoais
                                         </li>
-                                        <li id="nav-step2" class="step step2 active" data-id="step2"
+                                        <li id="nav-step2" class="step step2 disabled" data-id="step2"
                                             aria-labelledby="nav-step2">
-                                            <i class="fa-solid fa-mortar-board"></i>
+                                            <i></i>
                                             Formação acadêmica
                                         </li>
                                         <li id="nav-step3" class="step step3 disabled" data-id="step3"
                                             aria-labelledby="nav-step3">
-                                            <i class="fa-solid fa-briefcase"></i>
-
+                                            <i></i>
                                             Experiência
                                         </li>
                                         <li id="nav-step4" class="step step4 disabled" data-id="step4"
                                             aria-labelledby="nav-step4">
-                                            <i class="fa-solid fa-plus"></i>
+                                            <i></i>
                                             <span>Informações adicionais</span>
                                         </li>
                                     </ol>
@@ -3274,7 +3263,7 @@
 
                             <div class="curriculum-vitae">
 
-                                <div id="step1" class="tabcontent">
+                                <div id="step1" class="tabcontent active">
                                     <fieldset style="">
                                         <legend class="line line-header">
                                             <span>1.1 Dados pessoais</span>
@@ -3417,7 +3406,7 @@
                                     </fieldset>
                                 </div>
 
-                                <div id="step2" class="tabcontent active">
+                                <div id="step2" class="tabcontent">
                                     <fieldset>
                                         <legend class="line line-header">
                                             <span>2.1 Formação acadêmica</span>
@@ -3449,8 +3438,7 @@
                                                         <div class="table-cell table-cell--quarter">
                                                             <label class="cv-label"
                                                                 for="school_conclusion_year[0]">Ano
-                                                                de
-                                                                Conclusão</label>
+                                                                de Conclusão</label>
                                                             <input type="number" min="1900"
                                                                 id="school_conclusion_year[0]" class="input-info"
                                                                 name="school_conclusion_year[0]" value=""><span
@@ -3587,7 +3575,7 @@
                                         <div class="form-btn form-btn--previous">
                                             <i></i>
                                             <input id="btnPrevious" type="button" value="Anterior"
-                                                title="Pág. anterior" class="">
+                                                title="Pág. anterior" class=" hide">
                                         </div>
                                         <div class="form-btn form-btn--next">
                                             <i></i>
@@ -3610,9 +3598,7 @@
                                 </div>
                             </div>
                         </form>
-
-
-                        <div id="preview-curriculum" style="min-height: 732.304px;" class="preview-toggle">
+                        <div id="preview-curriculum" style="min-height: 1035.08px;">
                             <div class="preview-cv preview-cv--header">
                                 <div class="preview-cv--btns">
                                     <div id="formBtnSelect" class="form-btn form-btn--select active">
@@ -3630,7 +3616,6 @@
                                         <span>Fechar</span>
                                     </div>
                                 </div>
-
                                 <ul id="previewCvList" class="preview-cv--list">
                                     <li data-template-id="roma" class="active">
                                         <div class="cv-thumb cv-thumb--dark" data-template-color="dark"
@@ -3666,53 +3651,46 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="template cv-roma active" data-template-color="dark" data-template-id="roma"
-                                style="min-height: 622.304px;">
-                                <div class="export_cv print" data-cv-print-area=""
-                                    style="transform: scale(0.608312); height: 132.864px;">
+                            <div class="template cv-roma active" data-template-color="dark" data-template-id="roma">
+                                <div class="export_cv print" data-cv-print-area>
                                     <div data-cv-step="step1_preview" class="sidebar">
-                                        <span class="user-img hide">
-                                            <img class="preview-avatar-img"
-                                                src="https://cdn.todacarreira.com/img/avatar.jpg"
+                                        <span class="user-img">
+                                            <img class="preview-avatar-img" src=""
                                                 alt="Foto do perfil"></span>
 
                                         <div class="user-info">
                                             <span class="user-info-item user-info--email">Email
-                                                <span data-cv-preview-id="email">marcielle0644@gmail.com</span>
+                                                <span data-cv-preview-id="email"></span>
                                             </span>
                                             <span class="user-info-item user-info--telephone">Telefone Residêncial
-                                                <span data-cv-preview-id="telephone">88939396600</span>
+                                                <span data-cv-preview-id="telephone"></span>
                                             </span>
-                                            <span class="user-info-item user-info--mobile"
-                                                style="display: none;">Celular
+                                            <span class="user-info-item user-info--mobile">Celular
                                                 <span data-cv-preview-id="mobile"></span>
                                             </span>
                                             <span class="user-info-item user-info--nationality">Nacionalidade
-                                                <span data-cv-preview-id="nationality">Brasileira</span>
+                                                <span data-cv-preview-id="nationality"></span>
                                             </span>
-                                            <span class="user-info-item user-info--age" style="display: none;">Idade
+                                            <span class="user-info-item user-info--age">Idade
                                                 <span><span data-cv-preview-id="age"></span> anos</span>
                                             </span>
-                                            <span class="user-info-item user-info--gender"
-                                                style="display: none;">Gênero
+                                            <span class="user-info-item user-info--gender">Gênero
                                                 <span data-cv-preview-id="gender"></span>
                                             </span>
-                                            <span class="user-info-item user-info--marital"
-                                                style="display: none;">Estado Civil
+                                            <span class="user-info-item user-info--marital">Estado Civil
                                                 <span data-cv-preview-id="marital"></span>
                                             </span>
                                             <span class="user-info-item user-info--address">Endereço
-                                                <span data-cv-preview-id="address">SOBRAL, SOBRAL</span>
+                                                <span data-cv-preview-id="address"></span>
                                             </span>
-                                            <span class="user-info-item user-info--cep" style="display: none;">CEP
+                                            <span class="user-info-item user-info--cep">CEP
                                                 <span data-cv-preview-id="cep"></span>
                                             </span>
                                         </div>
                                     </div>
                                     <div class="main">
-                                        <span class="user-info--name" data-cv-preview-id="name">Marcielle Jorge</span>
-                                        <div data-cv-step="step1_2_preview" class="main-section"
-                                            style="display: none;">
+                                        <span class="user-info--name" data-cv-preview-id="name"></span>
+                                        <div data-cv-step="step1_2_preview" class="main-section">
                                             <span class="main-section--title">Objetivo</span>
                                             <p data-cv-preview-id="career-goal"
                                                 class="list-item list-item--large preview-career-goal"></p>
@@ -3720,8 +3698,7 @@
 
                                         <div data-cv-step="step2_preview" class="main-section">
                                             <span data-cv-preview-id="academic"
-                                                class="main-section--title academic-preview"
-                                                style="display: none;">Formação acadêmica</span>
+                                                class="main-section--title academic-preview">Formação acadêmica</span>
                                             <ul>
                                                 <li class="list-item--wrap academic-block-preview hide">
                                                     <div class="list-line">
@@ -3743,7 +3720,7 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <div class="no-break" style="display: none;">
+                                            <div class="no-break">
                                                 <span class="main-section--subtitle">Qualificações e Cursos
                                                     complementares</span>
                                                 <p data-cv-preview-id="other_courses"
@@ -3752,8 +3729,8 @@
                                         </div>
 
                                         <div data-cv-step="step3_preview" class="main-section">
-                                            <span data-cv-preview-id="experience" class="main-section--title"
-                                                style="display: none;">Experiência</span>
+                                            <span data-cv-preview-id="experience"
+                                                class="main-section--title">Experiência</span>
                                             <ul>
                                                 <li class="list-item--wrap hide experience-block-preview">
                                                     <div class="list-line">
@@ -3780,7 +3757,7 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <div class="no-break" style="display: none;">
+                                            <div class="no-break">
                                                 <span class="main-section--subtitle">Atividades complementares</span>
                                                 <p data-cv-preview-id="other_activity"
                                                     class="list-item list-item--large"></p>
@@ -3788,7 +3765,7 @@
                                         </div>
 
                                         <div data-cv-step="step4_preview" class="main-section">
-                                            <div class="no-break" style="display: none;">
+                                            <div class="no-break">
                                                 <span class="main-section--title">Informações adicionais</span>
                                                 <p data-cv-preview-id="other_informations"
                                                     class="list-item list-item--large"></p>
@@ -3799,9 +3776,9 @@
                             </div>
 
                             <div class="template cv-seul" data-template-id="seul">
-                                <div class="export_cv print" data-cv-print-area="">
+                                <div class="export_cv print" data-cv-print-area>
                                     <div data-cv-step="step1_preview" class="sidebar">
-                                        <span class="user-img hide">
+                                        <span class="user-img">
                                             <img class="preview-avatar-img"
                                                 src="https://cdn.todacarreira.com/img/avatar.jpg"
                                                 alt="Foto do perfil"></span>
@@ -3919,9 +3896,9 @@
                             </div>
 
                             <div class="template cv-mumbai" data-template-id="mumbai">
-                                <div class="export_cv print" data-cv-print-area="">
+                                <div class="export_cv print" data-cv-print-area>
                                     <div data-cv-step="step1_preview" class="header">
-                                        <span class="user-img hide">
+                                        <span class="user-img">
                                             <img class="preview-avatar-img"
                                                 src="https://cdn.todacarreira.com/img/avatar.jpg"
                                                 alt="Foto do perfil"></span>
@@ -4062,8 +4039,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <script async="" src="{{ asset('cv/curriculum.min.010.js') }}"></script>
+                    <script async src="{{ asset('cv/pdf.js') }}"></script>
                     <script>
                         (function() {
                             window[window.attachEvent ? "attachEvent" : "addEventListener"](window.attachEvent ? "onload" : "load",
@@ -4073,206 +4049,14 @@
                         })();
                     </script>
 
-
-                    <p>Siga o nosso passo a passo para preencher o seu curriculum profissional:</p>
-                    <h2>1.1 Dados pessoais</h2>
-                    <p>É recomendável preencher com informações pessoais indispensáveis, pois vão ajudar as empresas que
-                        vão receber seu currículo definirem o seu perfil.</p>
-                    <p>Incluir apenas:</p>
-                    <ul>
-                        <li>Nome completo</li>
-                        <li>Data de nascimento (no formato dia, mês e ano) ou idade</li>
-                        <li>Endereço completo com CEP</li>
-                    </ul>
-                    <p>O seu endereço pode ajudar a compreender a distância entre a sua casa e o trabalho, prevendo o
-                        tempo de deslocamento, por exemplo.</p>
-                    <p>Tenha atenção aos e-mails pouco profissionais (exemplo: <em>borboleta123@xpto.com</em>). E não
-                        coloque número da carteira de identidade ou CPF. Isso será pedido, caso você seja selecionado
-                        para a vaga.</p>
-                    <h2>1.2 Objetivo</h2>
-                    <p>Colocar o objetivo profissional é fundamental no currículo. Deve ser uma frase curta e direta,
-                        com duas linhas no máximo, indicando qual o cargo ou tarefa específicos que busca naquele
-                        emprego.</p>
-                    <p>O objetivo deve ser adaptado ao emprego específico ao qual está se candidatando e não deve ser
-                        muito genérico.</p>
-                    <p>Um bom exemplo pode ser:</p>
-                    <div id="div-gpt-sg-2d377c56b31c45511839199047b2d3a9" class="ad-unit ad-unit--pt-br gpt-middle"
-                        style="">
-                        <div id="google_ads_iframe_/1062898/TodaCarreira_InArticle_Mrec1_0__container__"
-                            style="border: 0pt none; width: 336px; height: 0px;"></div>
-                    </div>
-                    <blockquote>
-                        <p><em>Busco oportunidade como gerente de loja para desenvolver minha vasta experiência no setor
-                                de vendas.</em></p>
-                    </blockquote>
-                    <p>Um mau exemplo de objetivo no currículo:</p>
-                    <blockquote>
-                        <p><em>Quero contribuir para o crescimento da empresa. </em></p>
-                    </blockquote>
-                    <h2>2.1 Formação Acadêmica</h2>
-                    <p>Inserir sua formação acadêmica, colocando os cursos mais importantes para a vaga primeiro e
-                        sempre do mais recente para o mais antigo.</p>
-                    <p>Não é preciso colocar informações do ensino fundamental ou ensino médio.</p>
-                    <h2>2.2 Qualificações e Cursos complementares</h2>
-                    <p>Colocar outros cursos extracurriculares e qualificações relevantes para a vaga.</p>
-                    <p>Por exemplo:</p>
-                    <ul>
-                        <li>Inglês fluente e Espanhol intermediário</li>
-                        <li>Conhecimentos de HTML, JavaScript</li>
-                        <li>Participação em <em>workshop </em>de comunicação e negociação</li>
-                    </ul>
-                    <h2>3.1 Experiência Profissional</h2>
-                    <p>Colocar neste campo informação sobre as suas últimas experiências profissionais. Escolha apenas
-                        as experiências mais relevantes para a vaga ou que mostrem o seu percurso profissional mais
-                        recente.</p>
-                    <p>Para cada experiência, coloque a empresa, ano de entrada e de saída (se ainda estiver na empresa,
-                        coloque "atualmente"), o cargo ocupado e as suas principais responsabilidades na posição.</p>
-                    <p>Neste campo, pode mencionar os melhores resultados, projetos especiais ou realizações de destaque
-                        ao serviço da empresa. Por exemplo:</p>
-                    <blockquote>
-                        <p>Nos anos em que estive na empresa, fui responsável por uma parceria internacional que
-                            aumentou o lucro da companhia em 40%.</p>
-
-                        <p>Desenvolvi todo o sistema de informação para facilitar a gestão de projetos e
-                            compartilhamento de informação para toda a empresa.</p>
-                    </blockquote>
-                    <h2>3.2 Atividades complementares</h2>
-                    <p>Adicionar outras atividades que mostrem um pouco da sua personalidade e que possam ajudar o
-                        recrutador a avaliar que tipo de colaborador você será.</p>
-                    <p>Por exemplo:</p>
-                    <ul>
-                        <li>Realização de trabalho voluntário em comunidades carentes da minha cidade</li>
-                        <li>Praticante e membro da equipe de remo</li>
-                        <li>Líder do grupo de debate sobre proteção do meio ambiente</li>
-                    </ul>
-                    <h2>4. Informações adicionais</h2>
-                    <p>Este campo não é obrigatório, mas serve para incluir detalhes que possam ser relevantes para a
-                        vaga, como:</p>
-                    <ul>
-                        <li>Disponibilidade para viagens</li>
-                        <li>Disponibilidade para mudar de estado ou cidade</li>
-                        <li>Veículo próprio</li>
-                        <li>Experiência de 4 meses em trabalho no exterior</li>
-                    </ul>
-                    <div id="div-gpt-ad-1526377466410-0" class="ad-unit ad-unit--pt-br gpt-middle" style="">
-                        <div id="google_ads_iframe_/1062898/TodaCarreira_InArticle_Mrec3_0__container__"
-                            style="border: 0pt none; width: 336px; height: 0px;"></div>
-                    </div>
-                </div>
-
-
-
             </article>
 
         </main>
-        <aside class="sidebar">
-            <div class="sidebar-block articles--list">
 
-                <div class="section-title section-title--line-below">
-                    <h3 class="section-title--inner">Populares</h3>
-                </div>
-                <div class="articles">
-                    <div class="article-card article-card--list article-card--gray">
-                        <a href="/melhor-modelo-curriculo-emprego/">
-                            <span class="article-no-img card-img card-img--5by4">
-                                <img src="https://cdn.todacarreira.com/imagens/melhor-modelo-curriculo-emprego-54xs.jpg"
-                                    width="120" height="96"
-                                    alt="O melhor modelo de currículo para conseguir emprego em 2023">
-                            </span>
-                            <div class="card-content">
-                                <span class="title">O melhor modelo de currículo para conseguir emprego em 2023</span>
-                            </div>
+    </div>
+    <div>
 
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-
-        </aside>
-
-        <div class="related-section">
-
-            <div id="div-gpt-ad-1522330835492-0" class="ad-unit ad-unit--pt-br gpt-footer" style="">
-                <div id="google_ads_iframe_/1062898/TodaCarreira_Bottom_ROS_0__container__"
-                    style="border: 0pt none; width: 970px; height: 0px;"></div>
-            </div>
-            <footer class="footer">
-                <div class="container">
-                    <nav class="footer--menu">
-
-                    </nav>
-                    <div class="footer--copy">2017 - 2023></div>
-                    <div class="toggle-menu">
-                        <button class="toggle-menu--button" title="Menu"><i></i></button>
-                    </div>
-                </div>
-            </footer>
-
-
-
-            <script src="{{ asset('cv/frontoffice.js') }}"></script>
-
-            <script>
-                var bhof_options = {
-                    "ct": "xQznc04g8q7J8LRzyaex0EpVUVFrpUP7QudbSZIPgBaJz\/WXMauFbVa6xcD7933\/DjWKnAiNmTRaSYk3uaes0aVRoe\/y0QOn8dc7RcZKXhQnEqmbaAYtBfm84Q2zrWkj",
-                    "iv": "a514ecf105f04c2c1a0178f419144cbb",
-                    "s": "11137fd1641fa4f9"
-                };
-            </script>
-            <script type="module">
-                (async () => {
-                    if ('loading' in HTMLImageElement.prototype) {
-                        const allLazyloadImages = document.querySelectorAll("img[loading][data-src]");
-                        allLazyloadImages.forEach(img => {
-                            img.src = img.dataset.src;
-                        });
-                    } else {
-                        const lazySizesCdn = await import('https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js');
-                        lazySizes.init();
-                    }
-                })();.
-            </script>
-            <script nomodule="" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" defer="" async="">
-            </script><iframe
-                src="https://31bdd33dbb9a7fbf7e2913a124a743df.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html"
-                style="visibility: hidden; display: none;"></iframe>
-
-
-
-            <div>
-                <link rel="stylesheet" type="text/css" href="{{ asset('css/frontoffice.css') }}">
-            </div>
-            <script type="text/javascript" id="" src="https://unpkg.com/web-vitals"></script>
-            <reclameaqui-extension-pin>
-                <section></section>
-            </reclameaqui-extension-pin>
-            <script type="text/javascript" id="">
-                function sendToGTM(a, b, c) {
-                    dataLayer.push({
-                        event: "web-vitals",
-                        event_category: "Web Vitals",
-                        event_action: a.name,
-                        event_value: Math.round("CLS" === a.name ? 1E3 * a.delta : a.delta),
-                        event_label: a.id
-                    })
-                }
-                webVitals.getCLS(sendToGTM);
-                webVitals.getFID(sendToGTM);
-                webVitals.getLCP(sendToGTM);
-                webVitals.getFCP(sendToGTM);
-                webVitals.getTTFB(sendToGTM);
-            </script>
-
-
-
-
-
-
-
-
-
+    </div>
 </body>
 
 </html>

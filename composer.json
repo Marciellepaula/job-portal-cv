@@ -15,7 +15,9 @@
     "fideloper/proxy": "^4.0",
     "laravel/framework": "^6.2",
     "laravel/tinker": "^2.0",
-    "laravel/ui": "^1.2"
+    "laravel/ui": "^1.2",
+    "mpdf/mpdf": "^8.1",
+    "spatie/browsershot": "^3.40"
   },
   "require-dev": {
     "fzaninotto/faker": "^1.9.1",

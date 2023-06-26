@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DownloadCurriculoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +19,10 @@ Route::get('/', function () {
     return view('jobs');
 });*/
 
-Route::post('/curriculum', 'CurriculumController@store')->name('curriculum.store');
+// Route::post('/curriculum', 'DownloadCurriculoController@store')->name('curriculum.store');
 
+
+Route::get('/index', [DownloadCurriculoController::class, 'index1'])->name('index');
 
 Route::middleware(['auth:employeer'])->group(function () {
     //Route::get('/jobs', 'JobController@index');
@@ -37,7 +40,7 @@ Route::get('/resumebuilder', 'DownloadPdfController@create');
 Route::get('/generator', 'DownloadPdfController@create');
 Route::post('/submit', 'DownloadPdfController@submit');
 Route::post('/submit1', 'DownloadPdfController@submit1');
-Route::post('/curriculo_generator', 'DownloadPdfController@index1');
+Route::post('/generate_pdf', 'DownloadCurriculoController@submitForm');
 
 
 Auth::routes();
