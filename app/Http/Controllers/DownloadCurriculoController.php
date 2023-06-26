@@ -20,15 +20,12 @@ class DownloadCurriculoController extends Controller
         $html = '<style>' . $css . '</style>' . $html;
 
         try {
-            // $pdfFilePath = sys_get_temp_dir() . '/' . Str::random(16) . '.pdf';
+
             $pdfFilePath = public_path('css/CurrÃ­culo.pdf');
             Browsershot::html($html)
                 ->noSandbox()
                 ->save($pdfFilePath);
 
-
-            // Gerar o nome do arquivo PDF
-            $filename = 'exemplo.pdf';
 
             $pdf = Storage::get($pdfFilePath);
 
@@ -36,12 +33,7 @@ class DownloadCurriculoController extends Controller
                 'Content-Type' => 'application/pdf',
                 'Content-Disposition' => 'attachment; filename="CurrÃ­culo.pdf"',
             ];
-
-            // Delete the temporary PDF file
-
-
-            return response()->download($pdfFilePath, 'example.pdf', $headers)
-                ->deleteFileAfterSend(true);
+            return response()->file(storage_path('app/' . $pdfFilePath), $headers);
         } catch (\Exception $e) {
             // Log or print the exception message for debugging
             dd($e->getMessage());
