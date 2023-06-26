@@ -38,8 +38,7 @@ class DownloadCurriculoController extends Controller
             ];
 
             // Delete the temporary PDF file
-
-            return response()->file(storage_path('app/' . $pdfFilePath), $headers);
+            return response()->download(storage_path('app/' . $pdfFilePath), 'Curriculo.pdf', $headers);
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
