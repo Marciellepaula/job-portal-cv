@@ -899,3 +899,7 @@ var curriculumvitae = curriculumvitae || {},
       },
     };
   })();
+<<<<<<< HEAD
+
+=======
+>>>>>>> 14755a3f294f0ec0133f6042c11d2e8e4e99f058
