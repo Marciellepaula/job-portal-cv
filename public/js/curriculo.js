@@ -525,27 +525,32 @@ var curriculumvitae = curriculumvitae || {},
           curriculumvitae.adjustCVSize();
       },
       generatePdf: function () {
-        var a = document.querySelector(".template.active"),
-          e = new FormData();
+        var csrfToken = "{{ csrf_token() }}";
+        var a = document.querySelector(".template.active");
+        var e = new FormData();
         e.append("cv", a.outerHTML);
+
         var t = new XMLHttpRequest();
-        t.open("POST", "/curriculo_generator.php", !0),
-          (t.responseType = "arraybuffer"),
-          (t.onload = function (e) {
-            var t, r;
-            200 == this.status &&
-              ((t = new Blob([this.response], { type: "application/pdf" })),
-                ((r = document.createElement("a")).href =
-                  window.URL.createObjectURL(t)),
-                (r.download =
-                  a.querySelector('[data-cv-preview-id="name"]').textContent +
-                  " - CurrÃ­culo.pdf"),
-                r.click());
-          }),
-          t.send(e);
-      },
+        t.open("POST", "/generate_pdf.php", true);
+        t.setRequestHeader("X-CSRF-TOKEN", csrfToken);
+        t.responseType = "arraybuffer";
 
+        t.onload = function (e) {
+          var t, r;
+          if (this.status === 200) {
+            t = new Blob([this.response], { type: "application/pdf" });
+            r = document.createElement("a");
+            r.href = window.URL.createObjectURL(t);
+            r.download =
+              a.querySelector('[data-cv-preview-id="name"]').textContent +
+              " - Currículo.pdf";
+            r.click();
+          }
+        };
 
+        t.send(e);
+      }
+      
       openTab: function (t) {
         (document.getElementById("currentStep").value = t),
           this.moveBarProgression(t);

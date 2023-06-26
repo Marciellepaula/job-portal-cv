@@ -3662,7 +3662,7 @@
                                             <span class="user-info-item user-info--email">Email
                                                 <span data-cv-preview-id="email"></span>
                                             </span>
-                                            <span class="user-info-item user-info--telephone">Telefone Residêncial
+                                            <span class="user-in'fo-item user-info--telephone">Telefone Residêncial
                                                 <span data-cv-preview-id="telephone"></span>
                                             </span>
                                             <span class="user-info-item user-info--mobile">Celular
