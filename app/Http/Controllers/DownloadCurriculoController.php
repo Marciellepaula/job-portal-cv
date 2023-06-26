@@ -56,14 +56,14 @@ class DownloadCurriculoController extends Controller
                 ->noSandbox()
                 ->save(storage_path('app/pdf/' . $pdfFilePath));
 
-            $pdf = file_get_contents(public_path('css/CurrÃ­culo.pdf'));
+            $pdf = Storage::get($pdfFilePath);
 
             $headers = [
                 'Content-Type' => 'application/pdf',
                 'Content-Disposition' => 'attachment; filename="Curriculo.pdf"',
             ];
 
-            return response($pdfContents, 200, $headers);
+            return response($pdf, 200, $headers);
         } catch (\Exception $e) {
             dd($e->getMessage());
         }
