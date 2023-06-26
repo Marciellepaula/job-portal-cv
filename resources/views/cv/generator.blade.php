@@ -571,8 +571,17 @@
         formData.append('profile_image', step1Data
             .profile_image); // Append the image file separately
 
-
-
+       e = new FormData();
+        e.append("cv", a.outerHTML);
+        $step1Data = json_decode($request->step1, true);
+        $step2Data = json_decode($request->step2, true);
+        $step3Data = json_decode($request->step3, true);
+        $step4Data = json_decode($request->step4, true);
+        // Access individual fields from step1Data
+        $profile_image = $request->file('profile_image');
+        $first_name = $step1Data['first_name'];
+        $last_name = $step1Data['last_name'];
+        $email = $step1Data['email'];
 
 
         // Make an AJAX request to fetch the dynamic data
