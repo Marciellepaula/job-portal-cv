@@ -4,44 +4,49 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Spatie\Browsershot\Browsershot;
-use Illuminate\Support\Str;
-use Symfony\Component\HttpFoundation\Response;
 
 class DownloadCurriculoController extends Controller
 {
-
-
     public function submitForm(Request $request)
     {
+
         $css = file_get_contents(public_path('css/curriculo.css'));
-        $html = $request->input('cv'); // Retrieve the HTML value from the request
-        $html = '<style>' . $css . '</style>' . $html;
+        $html = $request->input('cv');
+        $css .= "
+        
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 20mm;
+                background-color: black;
+                color: #ffffff;
+                padding: 10px;
+            }
+        ";
 
-        try {
-            // $pdfFilePath = sys_get_temp_dir() . '/' . Str::random(16) . '.pdf';
-            $pdfFilePath = public_path('css/CurrÃ­culo.pdf');
-            Browsershot::html($html)
-                ->noSandbox()
-                ->save($pdfFilePath);
 
+        $html = '<style>' . $css . '</style>';
+        $html .= '';
+        $html .= '<div class="body">' . $request->input('cv') . '</div>';
+        $html .= '<footer>My Custom Footer</footer>';
 
-            // Gerar o nome do arquivo PDF
-            $filename = 'exemplo.pdf';
+        $pdf = Browsershot::html($html)
+            ->format('A4')
+            ->showBackground()
+            ->showBrowserHeaderAndFooter()
+            ->headerHtml('$html')
+            ->footerHtml('$html')
+            ->pdf();
 
-            $pdf = Storage::get($pdfFilePath);
+        $headers = [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'attachment; filename="mypdf.pdf"',
+        ];
 
-            $headers = [
-                'Content-Type' => 'application/pdf',
-                'Content-Disposition' => 'attachment; filename="Curriculo.pdf"',
-            ];
-
-            // Delete the temporary PDF file
-            return response()->download(storage_path('app/' . $pdfFilePath), 'Curriculo.pdf', $headers);
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-        }
+        return response($pdf, 200, $headers);
     }
 
 

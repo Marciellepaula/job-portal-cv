@@ -40,6 +40,7 @@ Route::get('/resumebuilder', 'DownloadPdfController@create');
 Route::get('/generator', 'DownloadPdfController@create');
 Route::post('/submit', 'DownloadPdfController@submit');
 Route::post('/submit1', 'DownloadPdfController@submit1');
+
 Route::post('/generate_pdf', 'DownloadCurriculoController@submitForm');
 
 

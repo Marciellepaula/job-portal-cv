@@ -1127,7 +1127,13 @@
     z-index: 0;
     -webkit-transition: margin .3s ease-out;
     transition: margin .3s ease-out;
-    float: left
+    float: left;
+}
+
+.cv-roma .export_cv::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .curriculum-vitae .input-group .cv-error:empty {
@@ -1943,6 +1949,7 @@ article.article .cv-thumb-color:not(:last-of-type) {
     margin-right: 5px
 }
 
+/* MUBAI */
 .cv-mumbai {
     font-size: .7em;
     color: #202020;
@@ -1974,8 +1981,8 @@ article.article .cv-thumb-color:not(:last-of-type) {
     width: 90px;
     height: 90px;
     float: left;
-    border-radius: 100px;
-    overflow: hidden;
+    border-radius: 100px due to the float. If 'float' has a value other than 'none', the box is floated and 'd;
+ overflow: hidden;
     margin: -10px 10px 20px 0
 }
 
@@ -2167,8 +2174,9 @@ article.article .cv-thumb-color:not(:last-of-type) {
 }
 
 
+/* MUMBAI */
 
-
+/* ROMA */
 .cv-roma {
     overflow: hidden;
     font-size: .7em;
@@ -2372,6 +2380,8 @@ article.article .cv-thumb-color:not(:last-of-type) {
     border: 0
 }
 
+
+/* SEUL */
 .cv-seul {
     overflow: hidden;
     font-size: .7em;

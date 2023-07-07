@@ -3222,7 +3222,7 @@
                     </div>
 
                     <div class="page-curriculum-vitae">
-                        <link rel="stylesheet" href="https://cdn.todacarreira.com/curriculum.011.css">
+                        <link rel="stylesheet" href="{{ asset('css/formcurriculo.css') }}">
                         <form id="form-curriculum" action="/generate_pdf" method="post" enctype="multipart/form-data"
                             target="formtarget">
                             @csrf
@@ -3606,7 +3606,7 @@
                                     </div>
                                     <div class="form-btn form-btn--pdf">
                                         <i class="swap"></i>
-                                        <input data-type="pdf" type="button" value="Baixar CV" name="pdf"
+                                        <input data-type="pdf" type="submit" value="Baixar CV" name="pdf"
                                             onclick="curriculumvitae.generatePdf(this);" title="Baixar CV">
                                     </div>
                                     <div class="form-btn form-btn--close"
@@ -3651,6 +3651,8 @@
                                     </li>
                                 </ul>
                             </div>
+
+
                             <div class="template cv-roma active" data-template-color="dark" data-template-id="roma">
                                 <div class="export_cv print" data-cv-print-area>
                                     <div data-cv-step="step1_preview" class="sidebar">
@@ -3698,7 +3700,8 @@
 
                                         <div data-cv-step="step2_preview" class="main-section">
                                             <span data-cv-preview-id="academic"
-                                                class="main-section--title academic-preview">Formação acadêmica</span>
+                                                class="main-section--title academic-preview">Formação
+                                                acadêmica</span>
                                             <ul>
                                                 <li class="list-item--wrap academic-block-preview hide">
                                                     <div class="list-line">
@@ -3758,7 +3761,8 @@
                                                 </li>
                                             </ul>
                                             <div class="no-break">
-                                                <span class="main-section--subtitle">Atividades complementares</span>
+                                                <span class="main-section--subtitle">Atividades
+                                                    complementares</span>
                                                 <p data-cv-preview-id="other_activity"
                                                     class="list-item list-item--large"></p>
                                             </div>
@@ -3909,7 +3913,8 @@
                                                 <span class="user-info-item user-info--nationality">Nacionalidade:
                                                     <span data-cv-preview-id="nationality"></span></span>
                                                 <span class="user-info-item user-info--age">Idade: <span
-                                                        data-cv-preview-id="age"></span> anos</span>
+                                                        data-cv-preview-id="age"></span>
+                                                    anos</span>
                                                 <span class="user-info-item user-info--gender">Gênero: <span
                                                         data-cv-preview-id="gender"></span></span>
                                                 <span class="user-info-item user-info--marital">Estado Civil: <span
